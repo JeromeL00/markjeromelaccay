@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+    @apply scroll-smooth
+}
+
+body {
+    @apply font-poppins
+}
+
+.header .toggle__menu span {
+    height: 0.2rem;
+    width: 2rem;
+    @apply bg-primary block mb-[0.4rem] ml-auto
+}
+.mobileNav {
+    max-height: 0;
+    overflow: hidden;
+}
+.mobileNav.active {
+    max-height: 500px;
+    transition: 0.5s ease;
+}
+.active {
+    @apply text-primary
+}
+
+.banner__img img{
+    @apply md:w-[370px] h-auto
+}
+.banner__wrapper img {
+    animation: floatImage 4s infinite ease-in-out;
+}
+@keyframes floatImage {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-2rem);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+.cards h3 {
+    @apply text-dark  font-[700] text-xl font-inder
+}
+.cards p {
+    @apply py-[2rem] text-black
+}
+.cards {
+    @apply bg-white py-[2rem] px-[1rem] rounded-[2rem] text-center hover:scale-105 transition-[0.5s]
+ }
+
+/* Project Cards */
+
+.projects__cardImg {
+    @apply bg-black overflow-hidden mb-4 p-8 rounded-3xl
+}
+.projects__cards:hover .projects__cardImg img {
+    @apply scale-[1.5] opacity-[0.3]
+}
+.projects__cardContent {
+    @apply absolute left-0 bottom-[3rem] text-center translate-y-[2rem] invisible transition-[0.5s] ease-out md:bottom-[1rem] lg:bottom-[2.5rem]
+}
+.projects__cardImg:hover .projects__cardContent{
+    @apply visible translate-y-0
+}
+/* Contact */
+
+.contact__info__form p {
+    margin-bottom: 2rem;
+  }
+  
+  .form__group {
+    @apply mb-4 relative
+  }
+  
+  .form__group input,
+  .form__group textarea {
+    border-bottom: 1px solid black;
+    @apply block px-[0.8rem] py-[1.2rem] w-[100%] border-none outline-none text-[1.6rem]
+  }
+  
+  .form__group label { 
+    @apply pointer-events-none absolute transition-[0.2s] ease-in top-0 opacity-[0.8]
+  }
+  
+  .form__group textarea:focus + label,
+  .form__group textarea:valid + label,
+  .form__group input:focus + label,
+  .form__group input:valid + label {
+    @apply top-[-1.5rem] text-base opacity-100
+  }
+  
+  .contact__info__form button {
+    background-color: transparent;
+    border: 1px solid black;
+    @apply px-4 py-4 bg-transparent uppercase text-[1.2rem] hover:bg-dark hover:text-white transition-all
+  }
+  
